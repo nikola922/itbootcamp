@@ -135,6 +135,19 @@ foreach($niz3 as $vrednost)
     }
 }
 echo    "<br>";
+echo    $suma3; 
+
+$i=0;
+$suma3=0;
+while($i< count($niz3))
+{
+    if($niz3[$i])
+    {
+        $suma3+=$niz3[$i];
+        $i++;
+    }
+}
+echo    "<br>";
 echo    $suma3;
 
 // 9. Zadatak //
@@ -166,5 +179,136 @@ for ($i=0;$i < count($niz5);$i++)
 
 echo    "<br>";
 echo    $suma4;
+echo    "<br>";
+
+// 11. Zadatak //
+
+function    StampajNiz($niz6)
+{
+    foreach($niz6 as $elem)
+    {
+        echo    $elem. " '";
+    }
+    echo    "<br>";
+}
+
+$niz6=array(12,-6,4,-43,23,-2,4,17);
+
+foreach($niz6 as $vrednost2)
+{
+    $vrednost2*=(-1);
+    echo    "$vrednost2 \n";
+}
+echo    "<br>";
+StampajNiz($niz6);
+
+// 12. Zadatak //
+
+$niz7=array(2,6,4,7,3,2,7,9,9);
+
+for($i=0;$i<count($niz7);$i+=2)
+{
+    if($niz7[$i]%2!=0)
+    {
+        $niz7[$i]=-$niz7[$i];
+        echo    "$niz7[$i]\n";
+    }
+}
+
+// 13. Zadatak //
+
+$niz8=array(2,6,4,7,3,2,4,9);
+$br2=0;
+for($i=1;$i<count($niz7);$i+=2)
+{
+    if($niz8[$i]%2==0)
+    {
+        $br2++;
+    }
+}
+echo    "<br>";
+echo    $br2;
+echo    "<br>";
+
+// 14. Zadatak //
+
+$prvaKlupa1 = array("Nikola","Milicaa","Jelena","Milica","Vanja","Jelena");
+
+foreach($prvaKlupa1 as $duzina)
+{
+    echo strlen($duzina) . " ";
+}
+echo    "<br>";
+
+
+// 15. Zadatak //
+
+$prvaKlupa1 = array("Nikola","Milicaa","Jelena","Milica","Vanja","Jelena");
+$max = -$prvaKlupa[0];
+$maxRec = '';
+foreach($prvaKlupa1 as $duzina)
+{
+    echo strlen($duzina) . " ";
+    if($max<strlen($duzina))
+    {
+        $max= strlen($duzina);
+        $maxRec=$duzina;
+    }
+}
+
+echo   "<br> $max rec je $maxRec";
+
+// 16. Zadatak //
+echo   "<br>";
+$prvaKlupa2 = array("Nikolasdsd","Milicaa","Jelenaa","Milicasadsad","Vanja","Jelena");
+$suma5=0;
+foreach($prvaKlupa2 as $duzElementa)
+{
+    $suma5+=strlen($duzElementa);
+}
+$srednja2=$suma5/count($prvaKlupa2);
+echo    $srednja2;
+echo    "<br>";
+$br3=0;
+
+foreach($prvaKlupa2 as $duzElementa)
+{
+    if(strlen($duzElementa)>$srednja2)
+    {
+        $br3++;
+    }
+}
+echo    $br3;
+echo    "<br>";
+
+// 17. Zadatak //
+echo   "<br>";
+
+$prvaKlupa1 = array("Nikola","Milicaa","Jelena","Milica","Vanja","Jelena");
+$br4=0;
+foreach($prvaKlupa1 as $duzElementa1)
+{
+    if(strpos($duzElementa1,"a")!=false)
+    {
+        $br4++;
+    }
+}
+echo    $br4;
+
+// 18. Zadatak //
+echo   "<br>";
+
+$prvaKlupa1 = array("Nikola","Milicaa","Jelena","Milica","Vanja","Jelena");
+$br5=0;
+foreach($prvaKlupa1 as $duzElementa1)
+{
+    if(strpos($duzElementa1,"A")==)
+    {
+        $br5++;
+    }
+}
+echo    $br5;
+
+
 
 ?>
