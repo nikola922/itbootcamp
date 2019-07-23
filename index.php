@@ -1,7 +1,10 @@
 <?php
 
 // 3. Zadatak //
+
 echo    "<br>";
+$brojevi = array(3,14,5,2,9,5);
+$ukupno = count($brojevi);
 $suma=0;
 for($i=0;$i<$ukupno;$i++)
 {

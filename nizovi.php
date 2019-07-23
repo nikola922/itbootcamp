@@ -288,7 +288,7 @@ $prvaKlupa1 = array("Nikola","Milicaa","Jelena","Milica","Vanja","Jelena");
 $br4=0;
 foreach($prvaKlupa1 as $duzElementa1)
 {
-    if(strpos($duzElementa1,"a")!=false)
+    if(strpos($duzElementa1,"a")!==false)
     {
         $br4++;
     }
@@ -297,18 +297,95 @@ echo    $br4;
 
 // 18. Zadatak //
 echo   "<br>";
+echo   "<br>";
 
 $prvaKlupa1 = array("Nikola","Milicaa","Jelena","Milica","Vanja","Jelena");
 $br5=0;
 foreach($prvaKlupa1 as $duzElementa1)
 {
-    if(strpos($duzElementa1,"A")==)
+    if(strpos($duzElementa1,"a")=== 0 || strpos($duzElementa1, "A")===0)
     {
         $br5++;
     }
 }
 echo    $br5;
 
+//2.Nacin
+echo   "<br>";
+$br6=0;
+foreach($prvaKlupa1 as $duzElementa1)
+{
+    if(substr($duzElementa1, 0 , 1) == "a" || substr($duzElementa1, 0 , 1) == "A")
+    {
+        $br6++;
+    }
+}
+echo   "Broj stringova koji pocinju na A: $br6";
+
+// 19. Zadatak //
+echo   "<br>";
+
+
+
+
+
+// 20. Zadatak //
+echo   "<br>";
+
+$a=array(4,-7,2,6,1,-2);
+$b=array(2,8,-2,6,3,-1);
+$c=array();
+for($i=0; $i<count($a); $i++)
+{
+    $c[] = $a[$i];
+    $c[] = $b[$i];
+
+}
+
+StampajNiz($c);
+
+// 21. Zadatak //
+echo   "<br>";
+
+$a=array(4,-7,2,6,12);
+$b=array(2,8,-2,6,-2);
+$d=array();
+for($i=0; $i<count($a); $i++)
+{
+    $d[] = $a[$i]*$b[$i];
+
+}
+
+StampajNiz($d);
+
+// 22. Zadatak //
+echo   "<br>";
+
+$a=array(4,-7,2,6,12,5,-2,3,2);
+$n=count($a);
+$e=array();
+for($i=0; $i<$n/2; $i++)
+{
+    $e[] = ($a[$i]+$a[$n-$i-1])/2;
+
+}
+StampajNiz($e);
+
+
+// 19. Zadatak za domaci//
+
+$a=array();
+$b=array();
+foreach($a as $elem)
+{
+    if($elem>0)
+    {
+        //dodaj u $b
+        
+    }
+}
+
+// 21. Zadatak za domaci Uradjen Iznad//
 
 
 ?>
