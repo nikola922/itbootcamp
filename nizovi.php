@@ -92,7 +92,7 @@ for($i = 1; $i < count($niz2); $i++)
 {
     if($niz2[$i]>$max1)
     {
-        $max1 = $niz2[$i];
+        $max1 = $niz2[$i];  q
         $indeks = $i;
     }
 
