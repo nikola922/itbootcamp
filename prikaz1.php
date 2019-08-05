@@ -13,16 +13,16 @@ $rez=0;
 
 switch($o)
 {
-    case    "+":
+    case    "saberi":
         $rez=$A+$B;
         break;
-    case    "-":
+    case    "oduzmi":
         $rez=$A-$B;
         break;
-    case    "/":
+    case    "pomnozi":
         $rez=$A/$B;
         break;
-    case    "*":
+    case    "podeli":
         $rez=$A*$B;
         break;
     default:

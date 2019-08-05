@@ -87,13 +87,14 @@ echo    "<br>";
 
 $niz2=array(11,2,18,42,5);
 $max1=$niz2[0];
-$indeks = 0;
+$indeks1 = 0;
+$indeks2 = 0;
 for($i = 1; $i < count($niz2); $i++)
 {
     if($niz2[$i]>$max1)
     {
         $max1 = $niz2[$i];  
-        $indeks = $i;
+        $indeks1 = $i;
     }
 
 }
