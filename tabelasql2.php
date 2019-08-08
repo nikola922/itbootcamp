@@ -1,49 +1,8 @@
 </html>
 </head>
-<style>
-table {
-    width:100%;
-    margin: 0;
-}
-tr {
-    background-color:#ffffff;
-}
-tr:hover {
-    background-color:  #ececff;
-    cursor: pointer;
-}
-th {
-    color: #ffffff;
-    background-color: #6c7ae0;
-    font-family: Poppins-Regular;
-    font-size: 18px;
-    padding-top: 19px;
-    padding-bottom: 19px;
-    padding-left: 10px;
-}
-td {
-    font-family: Poppins-Regular;
-    font-size: 15px;
-    color:  #666666;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 15px;
-    border-bottom: 1px solid #f2f2f2;
-}
 
-td:nth-child(even) {
-    background-color: #26fc27;
-}
-td:nth-child(odd) {
-    background-color: #1d4a52;
-}
-td:nth-child(3)::after {
-    content: " (cm)";
-}
-td:nth-child(4)::after {
-    content: " (kg)";
-}
-</style>
+    <link type="text/css" rel="stylesheet" href="stil.css">
+
 </head>
 <?php 
 
@@ -56,15 +15,16 @@ td:nth-child(4)::after {
 
     if(!$conn)
     {
-        die("Neuspela konekcija. Razlog: " . mysqli_connect_error());
+        die("Neuspela konekcija. Razlog: " . mysqli_connect_error()
+            . "</body></html>");
     }
    
     mysqli_set_charset($conn,"utf8");
 
-    $sql = "SELECT ime, prezime, visina, tezina, god_rodjenja FROM pacijenti";
+    $sql = "SELECT ime, prezime, visina, tezina, god_rodjenja O pacijenti";
     
     $result = mysqli_query($conn, $sql);
-
+    
     if($result != false)
     {
     if(mysqli_num_rows($result) == 0)
@@ -79,7 +39,7 @@ td:nth-child(4)::after {
         echo "<th> Prezime  </th>";
         echo "<th> Tezina  </th>";
         echo "<th> Visina  </th>";
-        echo "<th> Godina rodjenja </th>";
+        echo "<th> Godina  </th>";
         
         $red = mysqli_fetch_assoc($result);
         while($red != false)
