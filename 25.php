@@ -86,28 +86,26 @@ $r2=new Zaposleni("Miki", "Miljkovic", 1987, 87000, "Ekonomista");
 $r3=new Zaposleni("Laki", "Lakic", 1990, 40000, "Pravnik");
 $radnici = array($r1, $r2, $r3);
 
-function  pozicija($radnici)
+function pozicija($r)
 {
-    foreach($radnici as $r)
+    if (strpos($r->getPozicija(), 'Ekonomista') !== false)
     {
-        if (strpos($r->getPozicija(), 'ekonomista') !== false)
-        {
-            return true;
-        }
-            return false;
+        return true;
+    }
+        return false;
+}
+
+foreach($radnici as $r)
+{
+    if(pozicija($r) == true)
+    {   
+        echo "Zaposlen u ekonomskom sektoru. ";
+    }
+    else
+    {
+        echo " Nije zaposljen u ekonomskom sektoru. ";
     }
 }
-
-if(pozicija($radnici) == true)
-{
-    echo "Zaposlen u ekonomskom sektoru. ";
-}
-else
-{
-    echo " Nije zaposljen u ekonomskom sektoru. ";
-}
-
-
 
 
 ?>

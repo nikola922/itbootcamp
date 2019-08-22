@@ -40,6 +40,57 @@
 
 <html>
 <head>
+<style>
+table {
+    width:100%;
+    margin: 0;
+}
+tr {
+    background-color:#ffffff;
+}
+tr:hover {
+    background-color:  #ececff;
+    cursor: pointer;
+}
+th {
+    color: #ffffff;
+    background-color: #6c7ae0;
+    font-family: Poppins-Regular;
+    font-size: 18px;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    padding-left: 10px;
+}
+td {
+    font-family: Poppins-Regular;
+    font-size: 15px;
+    color:  black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 15px;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+td:nth-child(even) {
+    background-color: #61aecf;
+}
+td:nth-child(odd) {
+    background-color: #a4b2b5;
+}
+a {
+       background: #395870;
+       background: linear-gradient(#00ffb5, #293f50);
+       border-right: 1px solid rgba(0, 0, 0, .3);
+       color: #fff;
+       padding: 12px 20px;
+       text-decoration: none;
+       text-align:center;
+       }
+   a:hover {
+       background: #314b60;
+       box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, .3);
+       }
+</style>
 </head>
 
 <body>
@@ -72,28 +123,22 @@
             }
             else
             {
-                echo "<p> Korisnici : </p>";
-                echo "<ul>";
+                echo "<caption> Korisnici </caption>";
+                echo "<table>";
+                echo "<tr>";
+                echo "<th> Ime  </th>";
+                echo "<th> Prezime  </th>";
+                echo "<th> Korisnicko ime </th>";
+                echo "<th> Pol  </th>";
+                echo "<th> Svojstvo  </th>";
+                echo "<th> Akcija  </th>";
                 while($red=$result->fetch_assoc())
                 {
-                    echo "<li>";
-                    echo $red["ime"];
-                    echo " ";
-                    echo $red["prezime"];
-                    echo "( ";
-                    if($red["pol"] == "M")
-                    {
-                        echo "<span style='color:blue'>";
-                        echo $red["username"];
-                        echo "</span>";
-                    }
-                    elseif($red["pol"] == "Ž")
-                    {
-                        echo "<span style='color:pink'>";
-                        echo $red["username"];
-                        echo "</span>";
-                    }
-                    echo " )";
+                    echo "<tr>";
+                    echo    "<td>" . $red["ime"] . "</td>";
+                    echo    "<td>" . $red["prezime"] . "</td>";
+                    echo "<td>" . $red["username"] . "</td>";
+                    echo "<td>" . $red["pol"] . "</td>";
                     $pid= $red["id"];
 
                     $sql1 = "
@@ -109,10 +154,10 @@
                         AND prijatelj_id = $id";
                     $result2 = $conn->query($sql2); 
                     $timene = $result2->num_rows;
-
+                    echo "<td>";
                     if($jatebe + $timene > 1)
                     {
-                        echo " Uzajamni prijatleji ";
+                        echo " Uzajamni prijatelji ";
                     }
                     elseif($jatebe > 0)
                     {
@@ -122,13 +167,19 @@
                     {
                         echo " korisnik mene prati ";
                     }
-
-                    echo "<a href='dm_prijatelji.php?id=$pid'> ";
+                    else
+                    {
+                        echo " nidje veze";
+                    }
+                    echo "</td>";
+                    echo "<td>";
+                    echo "<a href='dm_dodaj.php?dodaj=$pid'> ";
                     echo "Prati korisnika";
                     echo "</a>";
-                    echo "</li>";
+                    echo "</td>";
                 }
-                echo "</ul>";
+                echo "</tr>";
+                echo "</table>";
             }
         }
     ?>
