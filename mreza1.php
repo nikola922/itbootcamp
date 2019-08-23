@@ -159,7 +159,7 @@ a {
                     {
                         echo " Uzajamni prijatelji ";
                     }
-                    elseif($jatebe > 0)
+                    elseif($jatebe)
                     {
                         echo " pratim korisnika ";
                     }
@@ -174,7 +174,11 @@ a {
                     echo "</td>";
                     echo "<td>";
                     echo "<a href='dm_dodaj.php?dodaj=$pid'> ";
-                    echo "Prati korisnika";
+                    echo "Prati korisnika ";
+                    echo "</a>  ";
+
+                    echo " <a href='dm_brisi.php?brisi=$pid'> ";
+                    echo " Brisi pracenje ";
                     echo "</a>";
                     echo "</td>";
                 }

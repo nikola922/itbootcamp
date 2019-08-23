@@ -13,9 +13,9 @@
 
     $conn->set_charset('utf8');
 
-    $id = 3;
+    $id = 1;
 
-    if(!empty($_GET['id'])) 
+    if(!empty($_GET['dodaj'])) 
     {
         $pid=$conn->real_escape_string($_GET['dodaj']);
 
