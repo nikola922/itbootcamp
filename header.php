@@ -81,6 +81,8 @@ a {
                     list-style-type: none;
                     margin: 0;
                     padding: 0;
+                    right:0;
+                    display:inline-block;
                     overflow: hidden;
                     background-color: lightgreen;
                 }
@@ -136,6 +138,7 @@ a {
                                 <li><a href="prijatelji.php">Prijatelji</a></li>
                                 <li><a href="forma.php">Profil</a></li>
                                 <li><a href="logout.php">Logout</a></li>
+                                <li><a href="promeni_sifru.php">Izmeni sifru</a></li>
                             </ul>
                         </div>
                     </div>

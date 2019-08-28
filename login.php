@@ -136,12 +136,7 @@
 <body>
     <div class="wrapper">
         <header class="header">
-            <div class="blue">
-                <img src="img/header-shepe-blue.png" alt="">
-            </div>
-            <div class="white">
-                <img src="img/header-shepe-white.png" alt="">
-            </div>
+            
 
             <div class="row">
                     <div class="col-md-3 col-sm-3 col-xs-12">
@@ -183,10 +178,7 @@
                     
         </footer>
     </div>
-    <script src="js/jquery-3.1.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/active.js"></script>
+    
 </body>
 
 </html>

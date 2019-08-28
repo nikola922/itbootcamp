@@ -1,5 +1,5 @@
 <?php
-    session_start();
+    
     // Konekcija ka bazi
     $servername = "localhost";
     $username = "ambulanta";
@@ -18,11 +18,7 @@
 
     $conn->set_charset('utf8');
 
-    // Podesavanje id logovanog korisnika
-    if(!isset($_SESSION['id'])){
-        header('Location: login.php');
-    }
-    $id = $_SESSION['id'];
+    
 
 ?>
 
@@ -71,6 +67,8 @@ img {
                                 <li class="active"><a href="home.php">Pocetna</a></li>
                                 <li><a href="prijatelji.php">Prijatelji</a></li>
                                 <li><a href="forma.php">Profil</a></li>
+                                <li><a href="login.php">Uloguj se</a></li>
+                                <li><a href="registracija.php">Registruj se</a></li>
                             </ul>
                         </div>
                     </div>
