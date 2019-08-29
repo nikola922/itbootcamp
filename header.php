@@ -136,7 +136,8 @@ a {
                             <ul class="nav navbar-nav">
                                 <li class="active"><a href="home.php">Pocetna</a></li>
                                 <li><a href="prijatelji.php">Prijatelji</a></li>
-                                <li><a href="forma.php">Profil</a></li>
+                                <li><a href="profil.php"> Profil</a></li>
+                                <li><a href="forma.php">Izmeni Profil</a></li>
                                 <li><a href="logout.php">Logout</a></li>
                                 <li><a href="promeni_sifru.php">Izmeni sifru</a></li>
                             </ul>

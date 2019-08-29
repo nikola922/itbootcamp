@@ -75,10 +75,12 @@
                 {
                     echo "<tr>";
                     echo "<td>";
+                    echo "<a href='profil.php?id=$red[id]'>";
                     echo $red["ime"];
                     echo "</td>";
                     echo " ";
                     echo "<td>";
+                    echo "<a href='profil.php?id=$red[id]'>";
                     echo $red["prezime"];
                     echo "</td>";
                     echo "<td>";
